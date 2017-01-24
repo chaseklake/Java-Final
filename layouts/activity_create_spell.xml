@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_spell"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.chaseklake.spellbook.CreateSpell">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:id="@+id/editSpellName"
+        android:hint="Spell Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/NamesTextView"
+        android:layout_toEndOf="@+id/NamesTextView" />
+
+    <TextView
+        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NamesTextView"
+        android:textAllCaps="true"
+        android:textSize="40px"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/editSpellName"
+        android:layout_alignBottom="@+id/editSpellName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Level:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LevelTextView"
+        android:textAllCaps="true"
+        android:textSize="40px"
+        android:textStyle="bold"
+        android:layout_below="@+id/editSpellName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editSpellName"
+        android:id="@+id/LevelSpinner"
+        android:layout_toEndOf="@+id/LevelTextView"
+        android:layout_toRightOf="@+id/LevelTextView" />
+
+
+        <TextView
+            android:text="Components:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ComponentsTextView"
+            android:textAllCaps="true"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/VisCheckBox"
+            android:layout_alignBottom="@+id/VisCheckBox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+
+
+        <TextView
+            android:text="School:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SchoolTextView"
+            android:textAllCaps="true"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/LevelTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SchoolSpinner"
+            android:entries="@array/Magic_Schools"
+            android:layout_alignBaseline="@+id/SchoolTextView"
+            android:layout_alignBottom="@+id/SchoolTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/SchoolTextView"
+            android:layout_toRightOf="@+id/SchoolTextView" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/editRange"
+            android:hint="Range"
+            android:layout_alignBaseline="@+id/RangeTextView"
+            android:layout_alignBottom="@+id/RangeTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/RangeTextView"
+            android:layout_toEndOf="@+id/RangeTextView" />
+
+        <TextView
+            android:text="Range:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RangeTextView"
+            android:textAllCaps="true"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/SchoolSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRange"
+            android:layout_toEndOf="@+id/ComponentsTextView"
+            android:id="@+id/VisCheckBox"
+            android:layout_toRightOf="@+id/ComponentsTextView" />
+
+        <CheckBox
+            android:text="S"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRange"
+            android:layout_toRightOf="@+id/VisCheckBox"
+            android:layout_toEndOf="@+id/VisCheckBox"
+            android:id="@+id/SomCheckBox" />
+
+        <CheckBox
+            android:text="M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRange"
+            android:layout_toRightOf="@+id/SomCheckBox"
+            android:layout_toEndOf="@+id/SomCheckBox"
+            android:id="@+id/MatCheckBox" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/ComponentsTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/editCastTime"
+            android:layout_toEndOf="@+id/CastTimeTextView"
+            android:hint="Casting Time"
+            android:layout_toRightOf="@+id/CastTimeTextView" />
+
+        <TextView
+            android:text="Cast Time:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CastTimeTextView"
+            android:textAllCaps="true"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/editCastTime"
+            android:layout_alignBottom="@+id/editCastTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Duration:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DurationTextView"
+            android:textAllCaps="true"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:layout_below="@+id/editCastTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/CastTimeTextView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/editDur"
+            android:layout_toEndOf="@+id/DurationTextView"
+            android:layout_toRightOf="@+id/DurationTextView"
+            android:hint="Duration"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editDur">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:text="Description:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DescriptionTextView"
+                    android:textAllCaps="true"
+                    android:textSize="40px"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/editDescription"
+                    android:hint="Add Description"
+                    android:gravity="left|top"/>
+
+                <Button
+                    android:text="Create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCreateSpell" />
+            </LinearLayout>
+        </ScrollView>
+    -->
+
+</RelativeLayout>
